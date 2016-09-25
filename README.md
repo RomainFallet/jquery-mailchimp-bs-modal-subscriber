@@ -29,43 +29,41 @@
 
 **1.** Set a Bootstrap open modal link with the URL of the resource to which your users will be redirected after the subscription (for example, `https://www.google.com`). The data-target attribute must be `#download-guide-modal`.
 ```html
-<a href="<!-- YOUR RESOURCE LINK HERE -->" class="bootstrap-button" data-toggle="modal" data-target="#download-guide-modal">Télécharger le document</a>
+<a href="<!-- YOUR RESOURCE LINK HERE -->" class="mailchimp-bs-modal-button bootstrap-button" data-toggle="modal" data-target="#download-guide-modal">Télécharger le document</a>
 ```
 
 
 **2.** Then, set your Bootstrap modal, and replace the "action" attribute of the form tag with your Mailchimp list URL. The modal id must be `download-guide-modal`.
 ```html
-<div class="modal fade" id="download-guide-modal" tabindex="-1" role="dialog" aria-labelledby="myDownloadGuideModal">
-  <div class="modal-dialog" role="document">
-  
-    <form method="GET" action="<!-- YOUR MAILCHIMP LIST URL HERE -->" class="modal-content">
-    
-      <div class="modal-header">
-        <h4 class="modal-title text-primary" id="myModalLabel">Inscrivez-vous pour télécharger le document !</h4>
-      </div>
-      <div class="modal-body">
-        <div class="form-group">
-          <label class="text-muted">Adresse de messagerie</label>
-          <input type="email" name="MERGE0" class="form-control" placeholder="adresse@domaine.com">
-        </div>
-        <div class="form-group">
-          <label class="text-muted">Prénom</label>
-          <input type="text" name="MERGE1" class="form-control" placeholder="John Doe">
-        </div>
-        <div class="form-feedback text-info" 
-             data-empty-msg="Les champs ne peuvent être vides." 
-             data-incorrect-email="Le format de l’adresse de messagerie est incorrect."
-             data-thanks-msg="Merci ! Vous allez être redirigé dans "
-             data-error-msg="Un problème est survenu, veuillez réessayer."
-             data-mailchimp-notset="Le lien de la liste d’inscription Mailchimp est incorrect."
-             data-mailchimp-notsecure="Il n'est pas possible de se connecter à la liste d’inscription Mailchimp depuis une connexion sécurisée (https)."></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Non merci.</button>
-        <button type="submit" class="btn btn-primary" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Préparation">C'est parti !</button>
-      </div>
-    </form>
-  </div>
+<div class="modal fade mailchimp-bs-modal" id="download-guide-modal" tabindex="-1" role="dialog" aria-labelledby="myDownloadGuideModal">
+	<div class="modal-dialog" role="document">
+		<form method="GET" action="<!-- YOUR MAILCHIMP URL -->" class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title text-primary" id="myModalLabel">Inscrivez-vous pour vous rendre sur Google !</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<label class="text-muted">Adresse de messagerie</label>
+					<input type="email" name="MERGE0" class="form-control" placeholder="adresse@domaine.com">
+				</div>
+				<div class="form-group">
+					<label class="text-muted">Prénom</label>
+					<input type="text" name="MERGE1" class="form-control" placeholder="John Doe">
+				</div>
+				<div class="form-feedback text-info" 
+    				 data-empty-msg="Les champs ne peuvent être vides." 
+                     data-incorrect-email="Le format de l’adresse de messagerie est incorrect."
+                     data-thanks-msg="Merci ! Vous allez être redirigé dans "
+                     data-error-msg="Un problème est survenu, veuillez réessayer."
+                     data-mailchimp-notset="Le lien de la liste d’inscription Mailchimp est incorrect."
+                     data-mailchimp-notsecure="Il n'est pas possible de se connecter à la liste d’inscription Mailchimp depuis une connexion sécurisée (https)."></div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Non merci.</button>
+				<button type="submit" class="btn btn-primary" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Préparation">C'est parti !</button>
+			</div>
+		</form>
+	</div>
 </div>
 ```
 
