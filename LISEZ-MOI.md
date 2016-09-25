@@ -1,3 +1,5 @@
+[Read this documentation in english](https://github.com/numee/jquery-mailchimp-bs-modal-subscriber/blob/master/LISEZ-MOI.md)
+
 # jQuery Mailchimp Bootstrap modal subscriber
 
 ![](https://cloud.githubusercontent.com/assets/6952638/18815744/77cbf162-8339-11e6-88b1-f36a5803dc46.png)
@@ -6,9 +8,9 @@
 
 ## Pour démarrer
 
-**1.** Installez la bibliothèque jQuery dans votre projet : https://jquery.com/download/
+**1.** Installez la bibliothèque jQuery dans votre projet : https://jquery.com/download/.
 
-**2.** Installez le framework Bootstrap dans votre projet (CSS et JS) : http://getbootstrap.com/getting-started/
+**2.** Installez le framework Bootstrap dans votre projet (CSS et JS) : http://getbootstrap.com/getting-started/.
 
 **3.** Ajoutez le script suivant dans votre projet (il pèse moins de 3 ko), après les scripts de jQuery et Bootstrap :
 ```html
@@ -20,6 +22,8 @@
 `http://user.usXX.list-manage.com/subscribe/post-json?u=XXXXXXXXXXXXXXXXXXXXXXXXX&id=XXXXXXXXXX&c=?`
 
 ![](https://cloud.githubusercontent.com/assets/6952638/18815183/1a09732a-8329-11e6-94c7-c51c2166c5b2.gif)
+
+**5.** Vous pouvez également ajouter FontAwesome pour profiter d’une jolie icône de chargement : http://fontawesome.io/.
 
 ## Utilisation
 
@@ -67,7 +71,9 @@
 
 ## Demo
 
-Voir la démo : https://numee.github.io/jquery-mailchimp-bs-modal-subscriber/
+Voir la démo : https://numee.github.io/jquery-mailchimp-bs-modal-subscriber/.
+
+Vous pouvez également télécharger directement le code de la démo ici : https://github.com/numee/jquery-mailchimp-bs-modal-subscriber/archive/gh-pages.zip.
 
 ## Problème(s) existant(s)
 
