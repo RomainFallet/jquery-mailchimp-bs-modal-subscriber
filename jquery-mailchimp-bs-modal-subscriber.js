@@ -1,6 +1,7 @@
 jQuery(document).ready(function() {
     var successUrl = '';                        	        
     jQuery('[data-target="#download-guide-modal"]').on('click', function(e) {
+        e.preventDefault();
         jQuery('#download-guide-modal [name^="MERGE"]').val('');
         jQuery('#download-guide-modal .form-feedback').html('');
         successUrl = jQuery(this).attr('href');
