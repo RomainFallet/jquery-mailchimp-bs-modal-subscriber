@@ -14,6 +14,7 @@
 ```
 
 **4.** Get your Mailchimp list URL, and update it as seen below. It should looks like :
-http://user.usXX.list-manage.com/subscribe/post-json?u=XXXXXXXXXXXXXXXXXXXXXXXXX&id=XXXXXXXXXX&c=?
+
+`http://user.usXX.list-manage.com/subscribe/post-json?u=XXXXXXXXXXXXXXXXXXXXXXXXX&id=XXXXXXXXXX&c=?`
 
 ![](https://cloud.githubusercontent.com/assets/6952638/18815183/1a09732a-8329-11e6-94c7-c51c2166c5b2.gif)
