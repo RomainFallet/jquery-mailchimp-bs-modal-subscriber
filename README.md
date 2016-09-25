@@ -4,6 +4,15 @@
 
 ### Getting started
 
-* Install jQuery library in your project : https://jquery.com/download/
-* Install Bootstrap framework in your project : http://getbootstrap.com/getting-started/
-* Add the following script in your project, after jQuery and Bootstrap scripts, inside your `<head></head>` tag or just before the `</body>` tag
+**1.** Install jQuery library in your project : https://jquery.com/download/
+
+**2.** Install Bootstrap framework in your project (CSS and JS) : http://getbootstrap.com/getting-started/
+
+**3.** Add the following script in your project, after jQuery and Bootstrap scripts :
+```html
+<script src="https://raw.githubusercontent.com/numee/jquery-mailchimp-bs-modal-subscriber/master/jquery-mailchimp-bs-modal-subscriber.js"></script>
+```
+
+**4.** Get your Mailchimp list URL, and update it as seen below :
+
+![](https://cloud.githubusercontent.com/assets/6952638/18815183/1a09732a-8329-11e6-94c7-c51c2166c5b2.gif)
