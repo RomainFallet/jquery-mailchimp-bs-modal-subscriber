@@ -21,7 +21,7 @@
 
 ![](https://cloud.githubusercontent.com/assets/6952638/18815183/1a09732a-8329-11e6-94c7-c51c2166c5b2.gif)
 
-**5.** You can additionaly add FontAwesome to your project in order to have a fancy processing icon : http://fontawesome.io/.
+**5.** You can additionally add FontAwesome to your project in order to have a fancy processing icon : http://fontawesome.io/.
 
 ## Usage
 
