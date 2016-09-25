@@ -10,7 +10,7 @@
 
 **3.** Add the following script in your project, after jQuery and Bootstrap scripts :
 ```html
-<script src="https://raw.githubusercontent.com/numee/jquery-mailchimp-bs-modal-subscriber/master/jquery-mailchimp-bs-modal-subscriber.js"></script>
+<script src="https://raw.githubusercontent.com/numee/jquery-mailchimp-bs-modal-subscriber/master/jquery-mailchimp-bs-modal-subscriber.min.js"></script>
 ```
 
 **4.** Get your Mailchimp list URL, and update it as seen below :
