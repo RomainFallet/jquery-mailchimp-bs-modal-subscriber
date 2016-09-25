@@ -14,7 +14,7 @@
 
 **3.** Ajoutez le script suivant dans votre projet (il pèse moins de 3 ko), après les scripts de jQuery et Bootstrap :
 ```html
-<script src="https://cdn.rawgit.com/numee/jquery-mailchimp-bs-modal-subscriber/2434edd7e24e73499f5ea3007f9ebda379f58bbd/jquery-mailchimp-bs-modal-subscriber.min.js"></script>
+<script src="https://cdn.rawgit.com/numee/jquery-mailchimp-bs-modal-subscriber/07d5cad7d8772e5d84b4c4cbaae9b9cab6916c5e/jquery-mailchimp-bs-modal-subscriber.min.js"></script>
 ```
 
 **4.** Récupérez l’URL d’inscription de votre liste Mailchimp et modifiez-la comme indiqué ci-dessous. Elle devra ressembler à :
