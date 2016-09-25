@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>jQuery Mailchimp Bootstrap modal subscriber demo</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width" />
+		<!-- Bootstrap stylesheet -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	</head>
+	<body>
+		<a href="http://www.google.fr" class="bootstrap-button" data-toggle="modal" data-target="#download-guide-modal">Se rendre sur Google</a>
+		
+        <div class="modal fade" id="download-guide-modal" tabindex="-1" role="dialog" aria-labelledby="myDownloadGuideModal">
+        	<div class="modal-dialog" role="document">
+        		<form method="GET" action="http://numee.us9.list-manage.com/subscribe/post-json?u=2a599a4e12154367203760103&id=366a4ffcdb&c=?" class="modal-content">
+        			<div class="modal-header">
+        				<h4 class="modal-title text-primary" id="myModalLabel">Inscrivez-vous pour vous rendre sur Google !</h4>
+        			</div>
+        			<div class="modal-body">
+        				<div class="form-group">
+        					<label class="text-muted">Adresse de messagerie</label>
+        					<input type="email" name="MERGE0" class="form-control" placeholder="adresse@domaine.com">
+        				</div>
+        				<div class="form-group">
+        					<label class="text-muted">Prénom</label>
+        					<input type="text" name="MERGE1" class="form-control" placeholder="John Doe">
+        				</div>
+        				<div class="form-feedback text-info" 
+            				 data-empty-msg="Les champs ne peuvent être vides." 
+                             data-incorrect-email="Le format de l’adresse de messagerie est incorrect."
+                             data-thanks-msg="Merci ! Vous allez être redirigé dans "
+                             data-error-msg="Un problème est survenu, veuillez réessayer."
+                             data-mailchimp-notset="Le lien de la liste d’inscription Mailchimp est incorrect."></div>
+        			</div>
+        			<div class="modal-footer">
+        				<button type="button" class="btn btn-default" data-dismiss="modal">Non merci.</button>
+        				<button type="submit" class="btn btn-primary" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Préparation">C'est parti !</button>
+        			</div>
+        		</form>
+        	</div>
+        </div>
+        
+        <!-- jQuery script -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <!-- Bootstrap script -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</body>
+</html>
