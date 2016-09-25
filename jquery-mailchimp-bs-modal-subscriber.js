@@ -1,78 +1,78 @@
 jQuery(document).ready(function() {
-    var successUrl = '';                        	        
-    jQuery('[data-target="#download-guide-modal"]').on('click', function(e) {
+    jQuery('.mailchimp-bs-modal-button').on('click', function(e) {
         e.preventDefault();
-        jQuery('#download-guide-modal [name^="MERGE"]').val('');
-        jQuery('#download-guide-modal .form-feedback').html('');
-        successUrl = jQuery(this).attr('href');
+        jQuery(jQuery(this).attr('data-target')).find('[name^="MERGE"]').val('');
+        jQuery(jQuery(this).attr('data-target')).find('.form-feedback').html('');
+        jQuery(this).attr('data-success-url', jQuery(this).attr('href'));
         jQuery(this).attr('href', '#');
-        setTimeout(function() { jQuery(this).attr('href', successUrl); }, 2000);
+        setTimeout(function() { jQuery(this).attr('href', jQuery(this).attr('data-success-url')); }, 2000);
     });
     
-    jQuery('#download-guide-modal form input').on('focus', function() {
-        jQuery('.form-feedback').html('');
+    jQuery('.mailchimp-bs-modal input').on('focus', function() {
+        jQuery(this).parent('.mailchimp-bs-modal').find('.form-feedback').html('');
     });
     
-    jQuery('#download-guide-modal form').on('submit', function(e) {
+    jQuery('.mailchimp-bs-modal form').on('submit', function(e) {
         e.preventDefault();
         var error = false;
+        var target = this;
     
-        jQuery(this).serialize().split('&').forEach(function(element) {
+        jQuery(target).serialize().split('&').forEach(function(element) {
             if (element.match(/^MERGE[0-1]=$/)) {
-                jQuery('.form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-empty-msg'));
+                jQuery(target).find('.form-feedback').html(jQuery(target).find('.form-feedback').attr('data-empty-msg'));
                 error = true;
             }
         });
     
-        if (!error && !jQuery(this).attr('action').match(/^http:\/\/(.+?)\/subscribe\/post-json\?u=(.+?){25}&id=(.+?){10}&c=\?$/)) {
-            jQuery('.form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-mailchimp-notset'));
+        if (!error && !jQuery(target).attr('action').match(/^http:\/\/(.+?)\/subscribe\/post-json\?u=(.+?){25}&id=(.+?){10}&c=\?$/)) {
+            jQuery(target).find('.form-feedback').html(jQuery(target).find('.form-feedback').attr('data-mailchimp-notset'));
             error = true;
         }
     
-        if (!error && !jQuery('[name="MERGE0"]').val().match(/^.+?@.+?\.[a-z]{2,10}$/)) {
-            jQuery('.form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-incorrect-email'));
+        if (!error && !jQuery(target).find('[name="MERGE0"]').val().match(/^.+?@.+?\.[a-z]{2,10}$/)) {
+            jQuery(target).find('.form-feedback').html(jQuery(target).find('.form-feedback').attr('data-incorrect-email'));
             error = true;
         }
     
         if (!error && $(location).attr('protocol') === 'https:') {
-            jQuery('.form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-mailchimp-notsecure'));
+            jQuery(target).find('.form-feedback').html(jQuery(target).find('.form-feedback').attr('data-mailchimp-notsecure'));
             error = true;
         }
     
         if (!error) {
-            jQuery('#download-guide-modal form [type="submit"]').button('loading');
-            jQuery('#download-guide-modal form [data-dismiss]').hide();
+            jQuery(target).find('[type="submit"]').button('loading');
+            jQuery(target).find('[data-dismiss]').hide();
     
             jQuery.ajax({
-                url: jQuery(this).attr('action'),
-                method: jQuery(this).attr('method'),
-                data: jQuery(this).serialize(),
+                url: jQuery(target).attr('action'),
+                method: jQuery(target).attr('method'),
+                data: jQuery(target).serialize(),
                 dataType: 'jsonp',
                 contentType: "application/json; charset=utf-8",
                 success: function(data){
-                    jQuery('#download-guide-modal form [type="submit"]').button('reset');
+                    jQuery(target).find('[type="submit"]').button('reset');
                     if (data.result === 'success' || data.msg.match(/already subscribed/)) {
                         var feedbackIntervalCount = 3;
-                        jQuery('#download-guide-modal .modal-footer').hide();
-                        jQuery('#download-guide-modal .form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-thanks-msg') + feedbackIntervalCount + '.');
+                        jQuery(target).find('.modal-footer').hide();
+                        jQuery(target).find('.form-feedback').html(jQuery(target).find('.form-feedback').attr('data-thanks-msg') + feedbackIntervalCount + '.');
     
     
                         var feedbackInterval = setInterval(function() {
                             feedbackIntervalCount--;
-                            jQuery('#download-guide-modal .form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-thanks-msg') + feedbackIntervalCount + '.');
+                            jQuery(target).find('.form-feedback').html(jQuery(target).find('.form-feedback').attr('data-thanks-msg') + feedbackIntervalCount + '.');
                         }, 1000);
     
                         setTimeout(function() {
                             clearInterval(feedbackInterval);
-                            jQuery('#download-guide-modal form [data-dismiss]').show();
-                            jQuery('#download-guide-modal .modal-footer').show();
-                            jQuery('#download-guide-modal [data-dismiss]').trigger('click');
-                            jQuery(location).attr('href', successUrl);
+                            jQuery(target).find('[data-dismiss]').show();
+                            jQuery(target).find('.modal-footer').show();
+                            jQuery(target).find('[data-dismiss]').trigger('click');
+                            jQuery(location).attr('href', jQuery('[data-target="#' + jQuery(target).parents('.mailchimp-bs-modal').attr('id') +  '"]').attr('data-success-url'));
                         }, 3000);
                     }
                     else {
-                        jQuery('#download-guide-modal .form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-error-msg'));
-                        jQuery('#download-guide-modal form [data-dismiss]').show();
+                        jQuery(target).find('.form-feedback').html(jQuery(target).find('.form-feedback').attr('data-error-msg'));
+                        jQuery(target).find('[data-dismiss]').show();
                     }
                 }
             });
