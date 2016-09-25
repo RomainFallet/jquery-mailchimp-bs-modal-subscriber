@@ -1,4 +1,4 @@
-[Read this documentation in english](https://github.com/numee/jquery-mailchimp-bs-modal-subscriber/blob/master/LISEZ-MOI.md)
+[Read this documentation in english](https://github.com/numee/jquery-mailchimp-bs-modal-subscriber/blob/master/README.md)
 
 # jQuery Mailchimp Bootstrap modal subscriber
 
