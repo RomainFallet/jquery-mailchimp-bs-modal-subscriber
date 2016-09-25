@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
             error = true;
         }
     
-        if (!error && $(location).attr('protocol') === 'https:') {
+        if (!error && jQuery(location).attr('protocol') === 'https:') {
             jQuery(target).find('.form-feedback').html(jQuery(target).find('.form-feedback').attr('data-mailchimp-notsecure'));
             error = true;
         }
