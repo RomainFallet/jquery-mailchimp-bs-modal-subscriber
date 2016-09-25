@@ -24,18 +24,18 @@ jQuery(document).ready(function() {
             }
         });
     
-        if (!error && $(location).attr('protocol') === 'https:') {
-            jQuery('.form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-mailchimp-notsecure'));
-            error = true;
-        }
-    
-        if (!error && !jQuery(this).attr('action').match(/\/\/(.+?)\/subscribe\/post-json\?u=(.+?){25}&id=(.+?){10}&c=\?$/)) {
+        if (!error && !jQuery(this).attr('action').match(/^http:\/\/(.+?)\/subscribe\/post-json\?u=(.+?){25}&id=(.+?){10}&c=\?$/)) {
             jQuery('.form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-mailchimp-notset'));
             error = true;
         }
     
         if (!error && !jQuery('[name="MERGE0"]').val().match(/^.+?@.+?\.[a-z]{2,10}$/)) {
             jQuery('.form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-incorrect-email'));
+            error = true;
+        }
+    
+        if (!error && $(location).attr('protocol') === 'https:') {
+            jQuery('.form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-mailchimp-notsecure'));
             error = true;
         }
     
