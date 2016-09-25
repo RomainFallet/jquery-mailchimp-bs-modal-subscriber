@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
             }
         });
     
-        if (!error && !jQuery(this).attr('action').match(/^http:\/\/(.+?)\/subscribe\/post-json\?u=(.+?){25}&id=(.+?){10}&c=\?$/)) {
+        if (!error && !jQuery(this).attr('action').match(/^(http|https):\/\/(.+?)\/subscribe\/post-json\?u=(.+?){25}&id=(.+?){10}&c=\?$/)) {
             jQuery('.form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-mailchimp-notset'));
             error = true;
         }
