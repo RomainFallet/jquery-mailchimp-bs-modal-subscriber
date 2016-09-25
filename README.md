@@ -1,3 +1,5 @@
+[Lire cette documentation en français](https://github.com/numee/jquery-mailchimp-bs-modal-subscriber/edit/master/LISEZ-MOI.md)
+
 # jQuery Mailchimp Bootstrap modal subscriber
 
 ![](https://cloud.githubusercontent.com/assets/6952638/18815744/77cbf162-8339-11e6-88b1-f36a5803dc46.png)
