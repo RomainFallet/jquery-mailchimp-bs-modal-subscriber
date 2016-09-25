@@ -6,9 +6,9 @@
 
 ## Getting started
 
-**1.** Install jQuery library in your project : https://jquery.com/download/
+**1.** Install jQuery library in your project : https://jquery.com/download/.
 
-**2.** Install Bootstrap framework in your project (CSS and JS) : http://getbootstrap.com/getting-started/
+**2.** Install Bootstrap framework in your project (CSS and JS) : http://getbootstrap.com/getting-started/.
 
 **3.** Add the following script in your project (less than 3 ko), after jQuery and Bootstrap scripts :
 ```html
@@ -20,6 +20,8 @@
 `http://user.usXX.list-manage.com/subscribe/post-json?u=XXXXXXXXXXXXXXXXXXXXXXXXX&id=XXXXXXXXXX&c=?`
 
 ![](https://cloud.githubusercontent.com/assets/6952638/18815183/1a09732a-8329-11e6-94c7-c51c2166c5b2.gif)
+
+**5.** You can additionaly add FontAwesome to your project in order to have a fancy processing icon : http://fontawesome.io/.
 
 ## Usage
 
@@ -67,7 +69,9 @@
 
 ## Demo
 
-See demo at : https://numee.github.io/jquery-mailchimp-bs-modal-subscriber/
+See demo at : https://numee.github.io/jquery-mailchimp-bs-modal-subscriber/.
+
+You can also directly download the demo files here : https://github.com/numee/jquery-mailchimp-bs-modal-subscriber/archive/gh-pages.zip.
 
 ## Troubleshooting
 
