@@ -24,6 +24,11 @@ jQuery(document).ready(function() {
             }
         });
     
+        if (!error && $(location).attr('protocol') === 'https:') {
+            jQuery('.form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-mailchimp-notsecure'));
+            error = true;
+        }
+    
         if (!error && !jQuery(this).attr('action').match(/\/\/(.+?)\/subscribe\/post-json\?u=(.+?){25}&id=(.+?){10}&c=\?$/)) {
             jQuery('.form-feedback').html(jQuery('#download-guide-modal .form-feedback').attr('data-mailchimp-notset'));
             error = true;
