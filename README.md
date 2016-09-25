@@ -8,7 +8,7 @@
 
 **2.** Install Bootstrap framework in your project (CSS and JS) : http://getbootstrap.com/getting-started/
 
-**3.** Add the following script in your project, after jQuery and Bootstrap scripts :
+**3.** Add the following script in your project (less than 3 ko), after jQuery and Bootstrap scripts :
 ```html
 <script src="https://raw.githubusercontent.com/numee/jquery-mailchimp-bs-modal-subscriber/master/jquery-mailchimp-bs-modal-subscriber.min.js"></script>
 ```
